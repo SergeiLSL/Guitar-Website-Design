@@ -1,3 +1,143 @@
 //====================================================================================================
+.page {
+	// .page__main
+	&__main {
+	}
+}
+
+.main {
+	padding-bottom: rem(80);
+	// .main__container
+	&__container {
+		display: flex;
+	}
+	// .main__content
+	&__content {
+		flex: 0 1 50%;
+		align-self: flex-end;
+		padding-top: rem(120); // отступ безопасности при сужении экрана
+		padding-bottom: rem(60);
+		padding-right: rem(20);
+		@media (max-width: rem(1092)){
+			flex: 0 1 60%;
+			padding-bottom: 0;
+		}
+		@media (max-width:$mobile){
+			flex: 1 1 100%;
+			padding-right: 0;
+			padding-top: rem(80);
+		} 
+	}
+	// .main__title
+	&__title {
+		font-family: "CalSans";
+		color: #121212;
+		font-size: rem(56);
+		line-height: math.div(67, 56);
+		span {
+			color: #ff6428;
+		}
+		&:not(:last-child) {
+			margin-bottom: rem(16);
+		}
+		@media (max-width:$mobile){
+			font-size: rem(44);  
+		}
+	}
+	// .main__text
+	&__text {
+		line-height: math.div(24, 16);
+		font-weight: 500;
+		max-width: rem(420);
+		&:not(:last-child) {
+			margin-bottom: rem(31);
+		}
+	}
+	// .main__actions
+	&__actions {
+	}
+	// .main__decor
+	&__decor {
+		flex: 0 1 50%;
+		@media (max-width: rem(1092)){
+			flex: 0 1 40%;
+		}
+		@media (max-width:$mobile){
+			display: none; 
+		} 
+	}
+	// .main__image
+	&__image {
+		//display: inline-block; // если фото будет необрезано
+		position: relative;
+		margin-right: rem(-120);
+		max-width: rem(672); // если фото будет необрезано
+		padding-bottom: 97.6%; // если фото будет необрезано
+		img {
+			position: absolute; // если фото будет необрезано
+			width: 100%; // если фото будет необрезано
+			height: 100%; // если фото будет необрезано
+			top: 0; // если фото будет необрезано
+			left: 0; // если фото будет необрезано
+			object-fit: cover; // если фото будет необрезано
+			max-width: rem(672);
+			overflow: hidden; // если фото будет необрезано
+			border-radius: 0 0 rem(150) rem(360); // если фото будет необрезано
+			//background-color: #000; // если фото будет необрезано
+			@media (max-width: rem(1092)){
+				width: 100%;
+			} 
+		}
+		&::after {
+			content: "";
+			background: url('@img/main/decor.svg') 0 0 no-repeat;
+			width: rem(80);
+			height: rem(80);
+			right: 36.3%;
+			bottom: 0;
+			transform: translate(0, 50%);
+			position: absolute;
+		}
+	}
+}
+
+.actions-main {
+	display: flex;
+	align-items: center;
+	@media (max-width:$mobileSmall){
+		flex-wrap: wrap;
+		justify-content: center; 
+	} 
+	// .actions-main__button
+	&__button {
+		text-align: center;
+		padding: rem(18.5) rem(48);
+		background-color: #ff6428;
+		border-radius: rem(40);
+		color: #fff;
+		line-height: math.div(24, 16);
+		font-weight: 600;
+		transition: all 03s ease 0;
+		&:hover {
+			background-color: #ba4619;
+		}
+		&:not(:last-child) {
+			margin-right: rem(40);
+		}
+		@media (max-width:$mobileSmall){
+			flex: 1 1 100%; 
+			&:not(:last-child) {
+				margin-right: 0;
+				margin-bottom: rem(10);
+			}
+		} 
+	}
+	// .actions-main__icon
+	&__icon {
+		&:not(:last-child) {
+			margin-right: rem(27);
+		}
+	}
+}
 
 //====================================================================================================

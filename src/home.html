@@ -1,16 +1,41 @@
 <!DOCTYPE html>
-<html lang="ru">
-	@@include('html/_head.htm',{
-	"title":"Главная"
-	})
-	<body>
-		<div class="wrapper">
-			@@include('html/_header.htm',{})
-			<main class="page">
-			</main>
-			@@include('html/_footer.htm',{})
-		</div>
-		@@include('html/_popup.htm',{})
-		@@include('html/_js.htm',{})
-	</body>
+<html lang="en">
+@@include('html/_head.htm',{
+"title":"Главная"
+})
+
+<body>
+	<div class="wrapper">
+		@@include('html/_header.htm',{})
+		<main class="page">
+			<section class="page__main main">
+				<div class="main__container">
+					<div class="main__content">
+						<h1 class="main__title">Browse top quality <span>Guitars</span> online</h1>
+						<p class="main__text">Explore 50k+ latest collections of branded guitars online with Rhythm.</p>
+						<div class="main__actions actions-main">
+							<a href="#" class="actions-main__button">Get the App</a>
+							<div class="actions-main__icon">
+								<img src="@img/main/Google.svg" alt="Google Icon">
+							</div>
+							<div class="actions-main__icon">
+								<img src="@img/main/Apple.svg" alt="Apple Icon">
+							</div>
+						</div>
+					</div>
+					<div class="main__decor">
+						<div class="main__image">
+							<img src="@img/main/01.jpg" alt="Main Decor">
+						</div>
+					</div>
+				</div>
+			</section>
+
+		</main>
+		@@include('html/_footer.htm',{})
+	</div>
+	@@include('html/_popup.htm',{})
+	@@include('html/_js.htm',{})
+</body>
+
 </html>

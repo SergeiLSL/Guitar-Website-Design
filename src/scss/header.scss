@@ -1,4 +1,84 @@
 //====================================================================================================
+.header {
+	position: absolute; //чтобы шапка нависала гад контентом сектора main
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 50;
+	// .header__container
+	&__container {
+		padding-top: rem(5);
+		padding-bottom: rem(5);
+		display: flex;
+		gap: rem(131);
+		align-items: center;
+		min-height: rem(151);
+		@media (max-width: rem(1092)){
+			gap: rem(50);
+			min-height: rem(100);
+		}
+		@media (max-width:$mobile){
+			min-height: rem(65);  
+		}
+		@media (max-width:$mobileSmall){
+			gap: rem(15); 
+		}
+	}
+	// .header__logo
+	&__logo {
+		@media (max-width:$mobileSmall){
+			width: rem(28); // обрезаем часть логотипа
+			flex: 0 0 rem(28); // обрезаем часть логотипа
+			overflow: hidden;  // обрезаем часть логотипа
+		}
+	}
+	// .header__menu
+	&__menu {
+	}
+}
+
+.menu {
+	padding: rem(10) rem(15) rem(10) 0; // когда текст заходит на фото добавили белый фон
+	border-radius: rem(5);
+	background-color: rgba(255, 255, 255, 0.8); // когда текст заходит на фото добавили белый фон
+	@media (max-width:$mobileSmall){
+		padding: 0;
+	}
+	// .menu__icon
+	&__icon {
+	}
+	// .menu__body
+	&__body {
+	}
+	// .menu__list
+	&__list {
+		display: flex;
+		column-gap: rem(56);
+		row-gap: rem(10);
+		flex-wrap: wrap;
+		@media (max-width: rem(1092)){
+			column-gap: rem(40); 
+		}
+		@media (max-width:$mobileSmall){
+			column-gap: rem(20); 
+		}
+	}
+	// .menu__item
+	&__item {
+	}
+	// .menu__link
+	&__link {
+		color: rgba(18, 18, 18, 0.4);
+		font-weight: 500;
+		line-height: math.div(24, 16);
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}
+
+
+
 
 //====================================================================================================
 
