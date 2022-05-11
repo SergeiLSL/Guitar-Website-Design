@@ -3,10 +3,20 @@
 	// .page__main
 	&__main {
 	}
+	// .page__store
+	&__store {
+	}
 }
-
+//========================================================================================================================================================
+//==== start main ===================================================================================================================================================
 .main {
 	padding-bottom: rem(80);
+	@media (max-width:$tablet){
+		padding-bottom: rem(50);
+	}
+	@media (max-width:$mobile){
+		padding-bottom: rem(30);
+	}
 	// .main__container
 	&__container {
 		display: flex;
@@ -18,15 +28,15 @@
 		padding-top: rem(120); // отступ безопасности при сужении экрана
 		padding-bottom: rem(60);
 		padding-right: rem(20);
-		@media (max-width: rem(1092)){
+		@media (max-width: rem(1092)) {
 			flex: 0 1 60%;
 			padding-bottom: 0;
 		}
-		@media (max-width:$mobile){
+		@media (max-width: $mobile) {
 			flex: 1 1 100%;
 			padding-right: 0;
 			padding-top: rem(80);
-		} 
+		}
 	}
 	// .main__title
 	&__title {
@@ -35,13 +45,13 @@
 		font-size: rem(56);
 		line-height: math.div(67, 56);
 		span {
-			color: #ff6428;
+			color: $Color;
 		}
 		&:not(:last-child) {
 			margin-bottom: rem(16);
 		}
-		@media (max-width:$mobile){
-			font-size: rem(44);  
+		@media (max-width: $mobile) {
+			font-size: rem(44);
 		}
 	}
 	// .main__text
@@ -59,12 +69,12 @@
 	// .main__decor
 	&__decor {
 		flex: 0 1 50%;
-		@media (max-width: rem(1092)){
+		@media (max-width: rem(1092)) {
 			flex: 0 1 40%;
 		}
-		@media (max-width:$mobile){
-			display: none; 
-		} 
+		@media (max-width: $mobile) {
+			display: none;
+		}
 	}
 	// .main__image
 	&__image {
@@ -84,13 +94,13 @@
 			overflow: hidden; // если фото будет необрезано
 			border-radius: 0 0 rem(150) rem(360); // если фото будет необрезано
 			//background-color: #000; // если фото будет необрезано
-			@media (max-width: rem(1092)){
+			@media (max-width: rem(1092)) {
 				width: 100%;
-			} 
+			}
 		}
 		&::after {
 			content: "";
-			background: url('@img/main/decor.svg') 0 0 no-repeat;
+			background: url("@img/main/decor.svg") 0 0 no-repeat;
 			width: rem(80);
 			height: rem(80);
 			right: 36.3%;
@@ -104,10 +114,10 @@
 .actions-main {
 	display: flex;
 	align-items: center;
-	@media (max-width:$mobileSmall){
+	@media (max-width: $mobileSmall) {
 		flex-wrap: wrap;
-		justify-content: center; 
-	} 
+		justify-content: center;
+	}
 	// .actions-main__button
 	&__button {
 		text-align: center;
@@ -124,13 +134,13 @@
 		&:not(:last-child) {
 			margin-right: rem(40);
 		}
-		@media (max-width:$mobileSmall){
-			flex: 1 1 100%; 
+		@media (max-width: $mobileSmall) {
+			flex: 1 1 100%;
 			&:not(:last-child) {
 				margin-right: 0;
 				margin-bottom: rem(10);
 			}
-		} 
+		}
 	}
 	// .actions-main__icon
 	&__icon {
@@ -140,4 +150,123 @@
 	}
 }
 
-//====================================================================================================
+//==== finish main ====================================================================================================================================================
+//========================================================================================================================================================
+//==== start store ===================================================================================================================================================
+.store {
+	padding-top: rem(80);
+	padding-bottom: rem(90);
+	background-color: #fce8e0; // убрать !!!!
+	@media (max-width:$tablet){
+		padding-top: rem(50);
+		padding-bottom: rem(50); 
+	}
+	@media (max-width:$mobile){
+		padding-top: rem(30);
+		padding-bottom: rem(30); 
+	}
+	// .store__container
+	&__container {
+	}
+	// .store__title
+	&__title {
+		margin-bottom: rem(86);
+		@media (max-width:$tablet){
+			margin-bottom: rem(50); 
+		}
+		@media (max-width:$mobile){
+			margin-bottom: rem(30);
+		}
+	}
+	// .store__body
+	&__body {
+	}
+}
+
+.body-store {
+	// .body-store__header
+	&__header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: rem(15); // отступ безопасности
+		margin-bottom: rem(32);
+		flex-wrap: wrap;
+	}
+	// .body-store__title
+	&__title {
+		letter-spacing: 0.08em;
+		font-size: rem(20);
+		line-height: math.div(30, 20);
+		text-transform: uppercase;
+		color: #121212;
+		font-weight: 600;
+	}
+	// .body-store__all
+	&__all {
+		color: #868686;
+		font-size: rem(20);
+		line-height: math.div(30, 20);
+		font-weight: 500;
+
+	}
+	// .body-store__items
+	&__items {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: rem(54);
+		&:not(:last-child) {
+			margin-bottom: rem(96);
+		}
+		@media (max-width:$tablet){
+			grid-template-columns: repeat(2, 1fr);
+		}
+		@media (max-width:$mobile){
+			grid-template-columns: repeat(1, 1fr);
+		}
+	}
+	// .body-store__item
+	&__item {
+	}
+}
+
+.item {
+	display: grid;
+	// .item__image
+	&__image {
+		text-align: center;
+		img {
+			max-width: 100%;
+		}
+		&:not(:last-child) {
+			margin-bottom: rem(40);
+		}
+		@media (max-width:$mobile){
+			&:not(:last-child) {
+				margin-bottom: rem(20);
+			}  
+		}
+	}
+	// .item__title
+	&__title {
+		color: #121212;
+		font-weight: 500;
+		line-height: math.div(24, 16);
+		justify-self: start;
+		&:not(:last-child) {
+			margin-bottom: rem(7);
+		}
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+	// .item__price
+	&__price {
+		font-size: rem(14);
+		line-height: math.div(21, 14);
+
+	}
+}
+//==== finish store ====================================================================================================================================================
+//========================================================================================================================================================
+//==== start  ===================================================================================================================================================
