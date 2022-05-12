@@ -12,6 +12,9 @@
 	// .page__brands
 	&__brands {
 	}
+	// .page__why
+	&__why {
+	}
 }
 //========================================================================================================================================================
 //==== start main ===================================================================================================================================================
@@ -381,13 +384,13 @@
 	padding-top: rem(110);
 	padding-bottom: rem(180);
 	background-color: #e0fbfc; // убрать !!!!
-	@media (max-width:$tablet){
+	@media (max-width: $tablet) {
 		padding-top: rem(50);
-		padding-bottom: rem(50); 
+		padding-bottom: rem(50);
 	}
-	@media (max-width:$mobile){
+	@media (max-width: $mobile) {
 		padding-top: rem(30);
-		padding-bottom: rem(30); 
+		padding-bottom: rem(30);
 	}
 	// .brands__container
 	&__container {
@@ -396,10 +399,10 @@
 	// .brands__title
 	&__title {
 		margin-bottom: rem(75);
-		@media (max-width:$tablet){
+		@media (max-width: $tablet) {
 			margin-bottom: rem(40);
 		}
-		@media (max-width:$mobile){
+		@media (max-width: $mobile) {
 			margin-bottom: rem(20);
 		}
 	}
@@ -408,20 +411,20 @@
 		max-width: rem(1020);
 		margin: 0 auto;
 		display: grid;
-		grid-template-columns: repeat(4, auto);// центрирует logo внутри div item
+		grid-template-columns: repeat(4, auto); // центрирует logo внутри div item
 		align-items: center;
 		justify-content: space-between;
 		column-gap: rem(20);
 		row-gap: rem(80);
-		@media (max-width:$tablet){
+		@media (max-width: $tablet) {
 			grid-template-columns: repeat(3, 1fr);
 		}
-		@media (max-width: rem(600)){
+		@media (max-width: rem(600)) {
 			row-gap: rem(20);
 			grid-template-columns: repeat(2, 1fr);
 			justify-content: center;
 		}
-		@media (max-width:$mobileSmall){
+		@media (max-width: $mobileSmall) {
 			//grid-template-columns: repeat(1, 1fr);
 		}
 	}
@@ -432,9 +435,82 @@
 
 //==== finish brands ====================================================================================================================================================
 //========================================================================================================================================================
-//==== start  ===================================================================================================================================================
+//==== start why ===================================================================================================================================================
+.why {
+	background: #121212;
+	padding-top: rem(90);
+	padding-bottom: rem(90);
+	@media (max-width: $tablet) {
+		padding-top: rem(50);
+		padding-bottom: rem(50);
+	}
+	// .why__container
+	&__container {
+	}
+	// .why__title
+	&__title {
+		margin-bottom: rem(35);
+		color: #fff;
+	}
+	// .why__items
+	&__items {
+		display: grid;
+		grid-template-columns: repeat(3, auto);
+		justify-content: space-between;
+		gap: rem(30);
+		@media (max-width: $tablet) {
+			grid-template-columns: repeat(2,auto);
+		}
+		@media (max-width: $mobile) {
+			justify-content: stretch;
+			grid-template-columns: repeat(1,auto);
+		}
+	}
+	// .why__item
+	&__item {
+	}
+}
 
+.item-why {
+	display: grid;
+	padding: rem(40);
+	text-align: center;
+	justify-items: center;
+	@media (max-width: $mobile) {
+		padding: rem(20);
+	}
+	// .item-why__icon
+	&__icon {
+		background: #262626;
+		border-radius: 20px;
+		display: flex;
+		width: rem(72);
+		height: rem(72);
+		justify-content: center;
+		align-items: center;
+		&:not(:last-child) {
+			margin-bottom: rem(40);
+		}
+	}
+	// .item-why__title
+	&__title {
+		text-transform: uppercase;
+		font-weight: 600;
+		color: #fff;
+		font-size: rem(18);
+		line-height: math.div(27, 18);
+		letter-spacing: 0.08em;
+		&:not(:last-child) {
+			margin-bottom: rem(12);
+		}
+	}
+	// .item-why__text
+	&__text {
+		font-size: rem(14);
+		line-height: math.div(21, 14);
+	}
+}
 
-//==== finish  ====================================================================================================================================================
+//==== finish why ====================================================================================================================================================
 //========================================================================================================================================================
 //==== start  ===================================================================================================================================================
