@@ -1,1 +1,14 @@
 // Заголовки, общие БЄМ блоки и проче...
+.title {
+	font-family: "CalSans";
+	color: #121212;
+	text-align: center;
+	font-size: rem(44);
+	line-height: math.div(53, 44);
+	span {
+		color: $Color;
+	}
+	@media (max-width:$mobile){
+		font-size: rem(38);
+	}
+}
