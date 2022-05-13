@@ -171,7 +171,7 @@
 .store {
 	padding-top: rem(80);
 	padding-bottom: rem(90);
-	background-color: #fce8e0; // убрать !!!!
+
 	@media (max-width: $tablet) {
 		padding-top: rem(50);
 		padding-bottom: rem(50);
@@ -286,7 +286,7 @@
 .categories {
 	padding-top: rem(80);
 	padding-bottom: rem(110);
-	background-color: #f1fce0; // убрать !!!!
+
 	@media (max-width: $tablet) {
 		padding-top: rem(50);
 		padding-bottom: rem(50);
@@ -389,7 +389,7 @@
 .brands {
 	padding-top: rem(110);
 	padding-bottom: rem(180);
-	background-color: #e0fbfc; // убрать !!!!
+
 	@media (max-width: $tablet) {
 		padding-top: rem(50);
 		padding-bottom: rem(50);
@@ -521,6 +521,7 @@
 //========================================================================================================================================================
 //==== start reviews ===================================================================================================================================================
 .reviews {
+	background-color: #f1fce0; // убрать !!!!
 	padding-top: rem(240);
 	padding-bottom: rem(240);
 	@media (max-width: $tablet) {
@@ -699,7 +700,7 @@
 //==== start favorite ===================================================================================================================================================
 .favorite {
 	padding-bottom: rem(120);
-	background: #f7f0ff;
+
 	@media (max-width:$tablet){
 		padding-bottom: rem(50);
 	}
